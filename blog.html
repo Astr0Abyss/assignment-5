@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment-5</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS and DaisyUI CDN Integration -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+            primary: "#B4F461",
+            ash: "#111111",
+            lightGreen: "#daf9b3",
+          },
+          fontFamily: {
+            lexend: "Lexend",
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://kit.fontawesome.com/78372cfe9c.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- NavBar -->
+<body class="font-lexend">
+  <header id="header" class="sticky top-0 z-[1200] bg-lightGreen bg-opacity-10">
+    <nav id="navbar" class="flex justify-between items-center w-11/12 mx-auto py-4">
+      
+      <div>
+        <button onclick="window.location.href = './index.html'"
+          class="bg-primary md:py-3 md:px-8 py-2 px-4 rounded-lg text-ash font-bold md:text-xl text-sm">
+          Home
+        </button>
+      </div>
+      
+      <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-2 items-center">
+        <img src="./assets/logo.png" alt="Donate Bangladesh" class="w-6 md:w-8" /> 
+        <p class="text-ash font-bold md:text-lg text-sm">Donate Bangladesh</p>
+      </div>
+      
+      <div class="flex gap-2 md:gap-3 items-center justify-center bg-ash/5 py-2 md:py-3 px-3 md:px-4 rounded-xl">
+        <img src="./assets/coin.png" alt="Coin" class="w-4 md:w-6" />
+        <p class="font-semibold md:text-xl text-sm text-ash/70">
+          <span id="main-amount">5500</span> BDT
+        </p>
+      </div>
+  
+    </nav>
+  </header>
+  <main class="bg-white">
+    <section class="w-11/12 mx-auto space-y-6 my-20">
+      <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold">
+        IMPORTANT FAQ <i class="fa-regular fa-comments-question fa-bounce"></i>
+      </h1>
+
+      <!-- 1st qst -->
+      <div class="collapse collapse-arrow bg-[#f7f9f3]">
+        <input type="checkbox" class="peer" />
+        <div class="collapse-title md:text-xl text-base font-semibold">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p class="text-ash/50 md:text-base text-sm">
+            The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2nd qst -->
+      <div class="collapse collapse-arrow bg-[#f7f9f3]">
+        <input type="checkbox" class="peer" />
+        <div class="collapse-title md:text-xl text-base font-semibold">
+          How do you select an element from the object?
+        </div>
+        <div class="collapse-content">
+          <p class="text-ash/50 md:text-base text-sm">
+            You can select an element from the DOM (Document Object Model) using methods like document.getElementById('id'), document.querySelector('selector'), or document.getElementsByClassName('class'). These methods allow you to access and manipulate HTML elements in your JavaScript code. 
+          </p>
+        </div>
+      </div>
+
+      <!-- 3rd qst -->
+      <div class="collapse collapse-arrow bg-[#f7f9f3]">
+        <input type="checkbox" class="peer" />
+        <div class="collapse-title md:text-xl text-base font-semibold">
+          What is event delegation in the context of the DOM, and why is it useful?
+        </div>
+        <div class="collapse-content">
+          <p class="text-ash/50 md:text-base text-sm">
+            Event delegation in the DOM is a technique where you attach a single event listener to a parent element instead of multiple listeners to individual child elements. Thanks to event bubbling, this parent listener can manage events triggered by any of its descendant elements. This is useful because it improves performance by reducing the number of event listeners and allows you to handle events for dynamically added child elements without additional code.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4th qst -->
+      <div class="collapse collapse-arrow bg-[#f7f9f3]">
+        <input type="checkbox" class="peer" />
+        <div class="collapse-title md:text-xl text-base font-semibold">
+          How do you manipulate an element's attributes and style using the DOM?
+        </div>
+        <div class="collapse-content">
+          <p class="text-ash/50 md:text-base text-sm">
+            You can manipulate an element's attributes in the DOM using the setAttribute() and getAttribute() methods. For example, to set an attribute, you would use element.setAttribute('attributeName', 'value'), and to retrieve it, you'd use element.getAttribute('attributeName').
+          </p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
